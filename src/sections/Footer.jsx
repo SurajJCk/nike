@@ -1,3 +1,4 @@
+import { copyrightSign } from "../assets/icons";
 import { footerLogo } from "../assets/images";
 import { footerLinks, socialMedia } from "../constants";
 
@@ -36,16 +37,31 @@ const Footer = () => {
               <ul>
                 {section.links.map((link) => (
                   <li
-                    className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray "
+                    className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
                     key={link.name}
                   >
-                    <a href={link.link}>{link.link}</a>
+                    <a>{link.name}</a>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
+        <div className="flex flex-1 justify-center items-center gap-2 font-montserrat cursor-pointer">
+          <img
+            src={copyrightSign}
+            alt="copy right sign"
+            width={20}
+            height={20}
+            className="rounded-full"
+          />
+          <p> Copyright. All rights reseversed.</p>
+        </div>
+        <p className="font-montserrat cursor-pointer">
+          Made in India & Made by Suraj Jyoti Changkakoti
+        </p>
       </div>
     </footer>
   );
