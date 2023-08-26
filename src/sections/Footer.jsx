@@ -7,7 +7,13 @@ const Footer = () => {
       <div className="flex flex-wrap justify-between items-start gap-20 max-lg:flex-col">
         <div className="flex flex-col items-start">
           <a href="/">
-            <img src={footerLogo} width={150} height={46} />
+            <img
+              src={footerLogo}
+              alt="logo"
+              width={150}
+              height={46}
+              className="m-0"
+            />
           </a>
           <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
             Get shoes ready for the new term at your nearest Nike store. Find
@@ -23,12 +29,17 @@ const Footer = () => {
         </div>
         <div className="flex flex-1 flex-wrap justify-between lg:gap-10 gap-20 ">
           {footerLinks.map((section) => (
-            <div key={section}>
-              <h4 className="text-white">{section.title}</h4>
+            <div key={section.title}>
+              <h4 className="text-white font-montserrat text-2xl leading-normal font-medium mb-6">
+                {section.title}
+              </h4>
               <ul>
                 {section.links.map((link) => (
-                  <li>
-                    <a href={link.name}></a>
+                  <li
+                    className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray "
+                    key={link.name}
+                  >
+                    <a href={link.link}>{link.link}</a>
                   </li>
                 ))}
               </ul>
