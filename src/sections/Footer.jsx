@@ -57,7 +57,7 @@ const Footer = () => {
             height={20}
             className="rounded-full"
           />
-          <p> Copyright. All rights reseversed.</p>
+          <p> Copyright. All rights reserved.</p>
         </div>
         <p className="font-montserrat cursor-pointer">
           Made in India & Made by Suraj Jyoti Changkakoti
